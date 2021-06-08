@@ -1,0 +1,34 @@
+<div id="bgimg"  [ngStyle]="{backgroundImage:'url(assets/img/renting.png'}"></div>
+
+<div id="list" class="row" >
+    <tbody *ngFor="let p of renting; let i= index">
+    <div class="col-md-1" id="all">
+      <div id="body" class="card" style="width: 20rem;">
+        <img src="/assets/img/renting.png" class="card-img-top img-thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">ID: {{p.id}}</h5>
+          <p class="card-text">From : {{p.date_debut|date:'dd/MM/yyyy'}}</p>
+          <p class="card-text">To: {{p.date_fin|date:'dd/MM/yyyy'}}</p>
+          <p class="card-text">Response:{{p.message}}</p>
+          <h5 class="card-text">Associated Realestate details :</h5>
+       
+          <h6 class="card-text">Title:</h6>  <p>{{p.realestates.title}}</p>
+          <h6 class="card-text">Address:</h6> <p> {{p.realestates.adress}}</p>
+          <h6 class="card-text">Description: </h6> <p> {{p.realestates.description}}</p>
+          <h6 class="card-text">Price: </h6> <p>{{p.realestates.price}} DT</p>
+          <!--
+          <button class="btn btn-warning mr-1" >UPDATE</button>
+         <button class="btn btn-danger mr-1" (click)="delete(i)">DELETE</button> -->
+          
+        </div>
+      </div>
+    </div>
+    </tbody>
+    <div class="col-md-1" >
+      <div id="body" class="card" style="width: 10rem;">
+     <img src="/assets/img/calendar.jpg" class="card-img-top img-thumbnail">
+     <div class="card-body">
+     <a class="nav-link" href="#" routerLink="/calendar">Calendar</a> 
+     </div></div></div>
+    
+  </div>

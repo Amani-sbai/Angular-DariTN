@@ -1,0 +1,36 @@
+<div id="bgimg"  [ngStyle]="{backgroundImage:'url(assets/img/appointment.png'}"></div>
+
+<div id="list" class="row" >
+    <tbody *ngFor="let p of appointments; let i= index">
+    <div class="col-md-1" id="all">
+      <div id="body" class="card" style="width: 20rem;">
+        <img src="/assets/img/appointment.png" class="card-img-top img-thumbnail">
+        <div class="card-body">
+          <h6 class="card-title">ID: {{p.id}}</h6>
+          <h6 class="card-text">Date :</h6> <p>{{p.date|date:'dd/MM/yyyy'}} </p>
+         <!-- <p class="card-text">Accepted: {{p.accepted}}</p> -->
+          <h6 class="card-text"> Type of appointment: </h6> <p>{{p.type}}</p>
+          <h5 class="card-text">Associated Realestate details :</h5>
+       
+          <h6 class="card-text">Title:</h6>  <p>{{p.realestates.title}}</p>
+          <h6 class="card-text">Address:</h6> <p> {{p.realestates.adress}}</p>
+          <h6 class="card-text">Description: </h6> <p> {{p.realestates.description}}</p>
+          <h6 class="card-text">Price: </h6> <p>{{p.realestates.price}} DT</p>
+          
+          <!--<button class="btn btn-warning mr-1" [routerLink]="['/updateappointment/p.id']">UPDATE</button> -->
+         <!-- <button class="btn btn-danger mr-1" (click)="delete(i)">DELETE</button>-->
+          
+        </div>
+      </div>
+    </div>
+    </tbody>
+   
+    <!--Calendar -->
+    <div class="col-md-1" >
+    <div id="body" class="card" style="width: 10rem;">
+   <img src="/assets/img/calendar.jpg" class="card-img-top img-thumbnail">
+   <div class="card-body">
+   <a class="nav-link" href="#" routerLink="/calendar">Calendar</a> 
+   </div></div></div>
+  
+  </div>

@@ -1,0 +1,26 @@
+
+    
+    <div id="bgimg" >
+        <div id="global" class="form-group">
+          <label class="form-label" id="name" style="width: 125px" >Date: </label>
+          <input type="text" class="form-control" #n="ngModel" [(ngModel)]="appointment.id" required >
+          <div class="alert alert-dark" *ngIf="n.invalid && n.touched">
+            This field cannot be left blank
+          </div>
+          <hr>
+
+    ////
+    <div class="text-center">
+        <button type="submit" class="btn btn-warning"(click)="addAppointment()" routerLink="/appointment">Add Appointment</button>
+      </div>
+<!--Calendar-->
+<div class="col-md-1" >
+    <div id="body" class="card" style="width: 10rem;">
+   <img src="/assets/img/calendar.jpg" class="card-img-top img-thumbnail">
+   <div class="card-body">
+   <a class="nav-link" href="#" routerLink="/calendar">Calendar</a> 
+   </div></div></div>
+  
+
+
+    
