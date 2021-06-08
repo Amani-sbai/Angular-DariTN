@@ -1,0 +1,29 @@
+
+<main class="chat">
+  <div class="container">
+    <div class="chat-content">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let chatMessage of chatService.chatMessages">
+            <strong>{{chatMessage.user}}: </strong>
+            <span>{{chatMessage.message}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">
+      <div class="chat-send row">
+        <div class="col-2">
+          <input type="text"  placeholder="your name" class="form-control" name="user" id="input-user" ngModel>
+        </div>
+        <div class="col-8">
+          <input type="text" class="form-control" placeholder="type your message" name="message" id="input-message" ngModel>
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-success">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</main>
