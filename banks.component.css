@@ -1,0 +1,24 @@
+#list{
+  box-shadow: 8px 15px 25px white;
+  margin-top: 70px;
+  background-color:  white ;
+}
+#all{
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+  margin-right: 10px;
+}
+img{
+  opacity: 0.8;
+}
+#body{
+  box-shadow: 3px 5px 8px #222629;
+  background-color:#222629;
+}
+p{
+  color: white;
+}
+h5{
+  color: white;
+}

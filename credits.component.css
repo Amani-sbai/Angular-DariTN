@@ -1,0 +1,24 @@
+
+h2{
+  font-family: Roboto;
+  color: white;
+}
+table{
+  width: 85%;
+  alignment: center;
+  margin-top: 45px;
+  background-color: #222629;
+}
+td{
+  color: white;
+}
+
+th{
+  font-family: Verdana;
+  text-align: center;
+  color: white;
+}
+#tt{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,69 @@
+#global {
+  padding-top: 30px;
+  padding-right: 200px;
+  padding-bottom: 30px;
+  padding-left: 200px;
+  border-radius: 10px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 50px;
+  background-color: #222629;
+  box-shadow: 8px 10px 12px #222629;
+  border: 0.1px solid #6B6E70;
+}
+#bankname{
+  width: 150px;
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+
+}
+#glb{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+#periodicity{
+  width: 150px;
+  margin-left: 20px;
+  margin-top: 30px;
+  padding: 10px;
+  text-align: center;
+}
+button{
+  width: 200px;
+  font-size: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  background-color: #86C232;
+  font-family: "JetBrains Mono Medium";
+}
+input{
+  margin-left: 10px;
+  border-radius: 10px;
+}
+select{
+  border-radius: 10px;
+}
+label{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: white;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+p{
+  color: white;
+}
+td{
+  color: white;
+}
+canvas:hover{
+  background-color: antiquewhite;
+  border-radius: 50px;
+}

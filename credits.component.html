@@ -1,0 +1,27 @@
+<div id="tt">
+<table class="table table-hover table-borderless" align="center" >
+  <thead class="table tab-pane">
+  <th>ID</th>
+  <th>Amount</th>
+  <th>Period</th>
+  <th>Periodicity</th>
+  <th>Amount Installment</th>
+  <th>Number Installments</th>
+  <th>Interest</th>
+  <th>Bank Name</th>
+  </thead>
+  <tbody>
+  <tr *ngFor=" let c of creditList; let i= index">
+    <td align="center">{{c.id}}</td>
+    <td align="center">{{c.amount}}</td>
+    <td align="center">{{c.period}}</td>
+    <td align="center">{{c.periodicity}}</td>
+    <td align="center">{{c.amountinstallment}}</td>
+    <td align="center">{{c.installment}}</td>
+    <td align="center">{{c.interest}}</td>
+    <td align="center" >{{c.bankname}}</td>
+    <td align="center"><button class="btn btn-danger" (click)="del(i)">DELETE</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>

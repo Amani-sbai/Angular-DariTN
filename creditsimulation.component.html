@@ -1,0 +1,69 @@
+<div id="glb">
+<div id="global" class="shadow-lg">
+  <div class="row g-3" id="form">
+    <div class="col-md-6">
+      <label for="amount" class="form-label">Amount</label>
+      <input type="number" class="form-control" placeholder="0.000" id="amount" [(ngModel)]="credit.amount">
+    </div>
+    <div class="col-md-6">
+      <label for="period" class="form-label">Repayment period (year)</label>
+      <input type="number" class="form-control" placeholder="0" id="period" [(ngModel)]="credit.period">
+    </div>
+    <div class="col-md-6">
+      <label for="periodicity" class="form-label">Periodicity</label>
+      <select type="text" class="form-select" id="periodicity" [(ngModel)]="credit.periodicity">
+        <option value="monthly">monthly</option>
+        <option value="termly">termly</option>
+        <option value="biannual">biannual</option>
+        <option value="annual">annual</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="bankname" class="form-label" >Bank name</label>
+        <select type="text" class="form-select" id="bankname" [(ngModel)]="credit.bankname">
+          <option value="Banque de tunisie">Banque de tunisie</option>
+          <option value="Banque de l'habitat">Banque de l'habitat</option>
+          <option value="Attijari Bank">Attijari Bank</option>
+          <option value="Amen Bank">Amen Bank</option>
+          <option value="Société Tunisienne de Banque">Société Tunisienne de Banque</option>
+          <option value="Banque Zitouna">Banque Zitouna</option>
+          <option value="Banque Nationale Agricole">Banque Nationale Agricole</option>
+          <option value="Union Internationale de Banque">Union Internationale de Banque</option>
+          <option value="Banque de Financement des Petites et Moyennes entreprises">Banque de Financement des Petites et Moyennes entreprises</option>
+        </select>
+    </div>
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-success" (click)="calcul()" >Calculate</button>
+  </div>
+  <div class="row g-3">
+  <div class="col-md-6">
+    <table id="result">
+     <tr>
+       <td> <label> Number of installments : </label> </td>
+       <td>{{credit.installment}}</td>
+      </tr>
+      <tr>
+        <td> <label> Amount of an installment :</label> </td>
+        <td> {{credit.amountinstallment}}</td>
+      </tr>
+      <tr>
+        <td> <label> Bank interest :</label> </td>
+        <td> {{credit.interest}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <div class="chart-wrapper">
+      <p align="center"> OCCURRENCE OF USED BANKS IN CREDIT SIMULATIONS</p>
+      <canvas baseChart
+              [datasets]="datasets"
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType">
+      </canvas>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>

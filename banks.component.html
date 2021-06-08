@@ -1,0 +1,22 @@
+<body>
+<div id="list" class="row justify-content-center" >
+  <tbody *ngFor="let p of bankList; let i= index">
+  <div class="col-md-1" id="all">
+    <div id="body" class="card" style="width: 18rem;">
+      <div class="card-body " id="cardbody">
+        <h5 class="card-title">{{p.name}}</h5>
+        <p class="card-text">Id: {{p.id}}</p>
+        <p class="card-text">Address: {{p.address}}</p>
+        <p class="card-text">Interest: {{p.interest}}</p>
+        <p class="card-text">Email: {{p.email}}</p>
+        <p class="card-text">Phone: {{p.phone}}</p>
+        <p class="card-text">Website: {{p.website}}</p>
+        <button class="btn btn-warning mr-1" [routerLink]="['/updatebank',p.id]">UPDATE</button>
+        <button class="btn btn-danger mr-1" (click)="delete(i)">DELETE</button>
+      </div>
+    </div>
+  </div>
+  </tbody>
+</div>
+</body>
+
